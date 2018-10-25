@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# bash script to pull active license feature and expiration date from IOS-XE routers.
+#
+# requirements:
+#	* snmpwalk in path
+#	* environment variable SNMPRO set to the RO community string to use
+#	
+# usage:
+#	./license_check.sh [FQDN|IP]
+#
+# sample output:
+#
+#	$ ~/bin/license-check.sh 192.168.0.1
+#	192.168.0.1,appx_1G,2018-11-05
+#	$
+#
 inuse=".1.3.6.1.4.1.9.9.543.1.2.3.1.14.1.1"
 feature=".1.3.6.1.4.1.9.9.543.1.2.3.1.3.1.1"
 enddate=".1.3.6.1.4.1.9.9.543.1.2.3.1.16.1.1"
