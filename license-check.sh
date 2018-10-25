@@ -27,5 +27,5 @@ if ping -c 1 -w 5 ${1} &>/dev/null; then
 
 
 else
-	echo ${1}: NOT reachable
+	echo ${1},NOT reachable,1901-01-01
 fi
